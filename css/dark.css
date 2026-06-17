@@ -1,0 +1,38 @@
+/* =============================================================
+   DARK — thème sombre (à tester).
+   Activé par la classe .dark sur <html>, via le bouton lune/soleil.
+   Principe : on surcharge surtout les variables de :root ; les rares
+   éléments aux couleurs "en dur" sont ajustés ensuite.
+   Pour désactiver le mode sombre : supprime ce fichier + son <link>,
+   le bouton #themeToggle et le bloc de thème dans js/main.js.
+   ============================================================= */
+
+html.dark{
+  --bg:#0f1012;        --bg-2:#16181b;       --card:#181b1f;
+  --ink:#eef1f3;       --muted:#9aa1a9;      --muted-2:#6b727a;
+  --blue:#557bff;      --blue-ink:#3f63f5;   --blue-soft:#1a2348;
+  --coral:#ff7d60;     --coral-ink:#ffa590;  --coral-soft:#3a201a;
+  --green:#22c55e;     --green-ink:#63d79c;  --green-soft:#13311f;
+  --line:rgba(238,241,243,.10);  --line-2:rgba(238,241,243,.18);
+  --shadow:0 18px 46px -22px rgba(0,0,0,.7);
+  --shadow-sm:0 8px 24px -14px rgba(0,0,0,.55);
+}
+
+/* Fonds décoratifs (points plus clairs, halos atténués) */
+html.dark .dots{background-image:radial-gradient(rgba(238,241,243,.05) 1px,transparent 1px);}
+html.dark .blob.b1{background:#4359a8;opacity:.28;}
+html.dark .blob.b2{background:#ab513c;opacity:.22;}
+
+/* Barre de navigation (verre dépoli sombre) */
+html.dark header{background:rgba(15,16,18,.72);}
+html.dark header.scrolled{background:rgba(15,16,18,.9);}
+
+/* Covers de projets : dégradés assombris + numéro clair */
+html.dark .proj .cover{background:linear-gradient(130deg,#27305c,#3a2a26);}
+html.dark .proj:nth-child(2) .cover{background:linear-gradient(130deg,#3a2a26,#27305c);}
+html.dark .proj .cover .ci{color:rgba(255,255,255,.26);}
+
+/* Menu mobile déroulant */
+@media (max-width:920px){
+  html.dark .nav-links{background:rgba(15,16,18,.98);}
+}

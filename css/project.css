@@ -1,0 +1,41 @@
+/* =============================================================
+   PROJECT — page d'étude de cas
+   Réutilise base.css (tokens, boutons, puces) + main.css (nav, footer).
+   ============================================================= */
+
+.proj-hero{padding:150px 0 0;}
+.proj-hero h1{font-family:var(--disp);font-weight:800;font-size:clamp(2.3rem,6vw,4rem);line-height:1.02;letter-spacing:-.02em;margin-top:18px;}
+.proj-hero .tagline{color:var(--muted);font-size:1.18rem;max-width:680px;margin-top:18px;}
+
+/* Bandeau d'informations clés */
+.proj-meta{display:flex;flex-wrap:wrap;margin-top:38px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--card);box-shadow:var(--shadow-sm);}
+.proj-meta .m{flex:1 1 180px;padding:18px 22px;border-right:1px solid var(--line);}
+.proj-meta .m:last-child{border-right:none;}
+.proj-meta .k{display:block;font-size:11.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted-2);}
+.proj-meta .v{display:block;font-family:var(--disp);font-weight:700;font-size:1.1rem;margin-top:6px;}
+
+/* Corps de l'étude de cas */
+.proj-body{padding:60px 0 110px;}
+.narrow{max-width:760px;}
+
+.callout{display:flex;gap:14px;align-items:flex-start;background:var(--blue-soft);border:1px solid var(--line);border-radius:16px;padding:18px 20px;color:var(--ink);font-size:.98rem;line-height:1.55;margin-bottom:50px;}
+.callout svg{width:22px;height:22px;color:var(--blue);flex:none;margin-top:2px;}
+
+.block{margin-bottom:44px;}
+.block:last-of-type{margin-bottom:40px;}
+.block h2{font-family:var(--disp);font-weight:700;font-size:1.7rem;letter-spacing:-.01em;margin-bottom:16px;}
+.block p{color:var(--muted);font-size:1.08rem;margin-bottom:14px;}
+.block p:last-child{margin-bottom:0;}
+.block p b,.block li b{color:var(--ink);font-weight:600;}
+.block ul{list-style:none;display:grid;gap:13px;margin-top:4px;}
+.block li{position:relative;padding-left:28px;color:var(--muted);font-size:1.06rem;line-height:1.5;}
+.block li::before{content:"";position:absolute;left:3px;top:.5em;width:8px;height:8px;border-radius:2px;background:var(--blue);transform:rotate(45deg);}
+.block .chips{margin-top:2px;}
+
+@media (max-width:680px){
+  .proj-hero{padding:120px 0 0;}
+  .proj-meta{flex-direction:column;}
+  .proj-meta .m{border-right:none;border-bottom:1px solid var(--line);}
+  .proj-meta .m:last-child{border-bottom:none;}
+  .proj-body{padding:48px 0 84px;}
+}
